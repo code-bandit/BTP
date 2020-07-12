@@ -1,0 +1,14 @@
+python .\pso-svm.py
+Enter the target error : 1e-6
+Enter number of iterations : 50
+0.6
+The best solution is:  [5.1 1.4]  in n_iterations:  50
+1.0
+
+
+python .\pso-svm.py
+Enter the target error : 1e-10
+Enter number of iterations : 40
+0.7
+The best solution is:  [5.1 1.4]  in n_iterations:  40
+1.0
