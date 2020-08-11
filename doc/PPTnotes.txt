@@ -2,7 +2,8 @@ Problem Statement :
     Multi-Agent Reinforcement Learning for Robo-Soccer
 
 WorkDone : 
-
+    Paper 3 : We couldnot get the environment on which they tested these Algo's but so we tested them individually with other algo's.
+        PSO-SVM : Tested on Iris Database => increases the classification accuracy.
 
 Future Path:
     
