@@ -175,6 +175,8 @@ for particle in particles_vector:
 
 x_train, x_test, y_train, y_test = train_test_split(X, Y, train_size=0.9)
 
+print((x_train))
+
 clf = SVC(kernel="rbf", gamma=1000, C=1000)
 clf.fit(x_train, y_train)
 y_pred = clf.predict(x_test)

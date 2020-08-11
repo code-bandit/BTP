@@ -4,6 +4,8 @@ Problem Statement :
 WorkDone : 
     Paper 3 : We couldnot get the environment on which they tested these Algo's but so we tested them individually with other algo's.
         PSO-SVM : Tested on Iris Database => increases the classification accuracy.
+        ISVM : 
+            P1 => Just Like Decision Tree we take m^th class and obtain a classifier / decision function for it   
 
 Future Path:
     
