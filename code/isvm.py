@@ -50,11 +50,11 @@ def main(k=3):
     df = df.drop(['Species'],axis=1)
     x = df.values.tolist()
     X = np.array(x)
-    print(y[:len(X)])
+    # print(y[:len(X)])
     X_train, X_test, y_train, y_test = train_test_split(X, y[:len(X)], train_size=0.9)
     m = 0
-    print("x_train : ", (X_train.shape))
-    print("y_train : ", (y_train.shape))
+    # print("x_train : ", (X_train.shape))
+    # print("y_train : ", (y_train.shape))
     Classifiers = np.array([])
     while m <= k-1:
         num = 0
@@ -71,8 +71,8 @@ def main(k=3):
                 newX_train[num, :] = X_train[i]
                 newY_train[num] = y_train[i]
                 num = num+1
-        print("New X : ", (newX_train), len(newX_train))
-        print("New Y : ", (newY_train), len(newY_train))
+        # print("New X : ", (newX_train), len(newX_train))
+        # print("New Y : ", (newY_train), len(newY_train))
         Classifiers = np.append(Classifiers, mainPSO(newX_train, newY_train))
         m = m+1
     

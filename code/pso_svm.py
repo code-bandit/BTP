@@ -52,7 +52,7 @@ xi(t+1) = xi(t) + vi(t+1)
 
 
 class Pso:
-    def __init__(self, target, target_error, n_particles, c1 = 2, c2 = 2, w = 1):
+    def __init__(self, target, n_particles, target_error=1e-6, c1 = 2, c2 = 2, w = 1):
         self.target = target
         self.target_error = target_error
         self.n_particles = n_particles
@@ -118,7 +118,7 @@ def svm(particles_vector, n_particles, x_train, y_train, x_test, y_test, C, gamm
     clf = SVC(kernel="rbf", gamma=gamma, C=C)
     clf.fit(x_train, y_train)
     y_pred = clf.predict(x_test)
-    print(accuracy_score(y_test, y_pred))
+    print("Accuracy Score after optimization : ", accuracy_score(y_test, y_pred))
 
 
 
@@ -159,11 +159,11 @@ X = df.values.tolist()
 n_particles = len(X)
 
 #PSO Initialization
-target_error = float(input("Enter the target error : "))
+# target_error = float(input("Enter the target error : "))
 # n_particles = int(input("Enter population size : "))
 n_iterations = int(input("Enter number of iterations : "))
 
-pso = Pso(1, target_error, n_particles)
+pso = Pso(1, n_particles)
 particles_vector = [Particle() for _ in range(pso.n_particles)]
 pso.particles = particles_vector
 # pso.printParticles()
@@ -175,12 +175,12 @@ for particle in particles_vector:
 
 x_train, x_test, y_train, y_test = train_test_split(X, Y, train_size=0.9)
 
-print((x_train))
+# print((x_train))
 
 clf = SVC(kernel="rbf", gamma=1000, C=1000)
 clf.fit(x_train, y_train)
 y_pred = clf.predict(x_test)
-print(accuracy_score(y_test, y_pred))
+print("Accuracy Score : ", accuracy_score(y_test, y_pred))
 
 """
 End for SVM
